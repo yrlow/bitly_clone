@@ -1,0 +1,44 @@
+
+<div id="header" >
+	<div id="header_left">
+		<h1 id="name">Bitly</h1>
+	</div>
+	<div id="header_right">
+		<form id="form" action="/urls" method="post" >
+			<input id="form_input" type="text" name="long_url" placeholder="http://">
+			<input id="form_submit" type="submit" value="Submit">
+			<p id="error"></p>
+		</form>
+	</div>
+</div>
+
+<ul id="pages" align="center" >
+	<li class="display_inline left_right_margin" >TOUR</li> 
+	<li class="display_inline left_right_margin" >ENTERPRISE</li>
+	<li class="display_inline left_right_margin" >RESOURCES</li>
+	<li class="display_inline left_right_margin" >BLOG</li>
+	<li class="display_inline left_right_margin" >ABOUT</li>
+</ul>
+
+<p id="header_text" align="center" >THE LINK KNOWS ALL. SO CAN YOU.</p>
+
+<table border="1" style="width:50%" align="center">
+	<tr>
+	  <th>id</th>
+	  <th>long url</th>
+	  <th>shorten url</th>
+	  <th>click count</th>
+	  <!-- <th>function</th> -->
+	</tr>
+
+	<% @urls.each do |url|%>
+		<tr>
+		  <td> <%= url.id %> </td>
+		  <td> <%= url.long_url %> </td>
+		  <td id="short_url"> <a href="/<%= url.short_url %>" ><%= url.short_url %> </a> <!-- href will redirect to /:shorturl in controller --></td>
+		  <td> <%= url.click_count %> </td>
+		  <!-- <td> <a href="/urls/<%= url.id %>/destroy"> remove </a></td> -->
+		</tr>
+	<% end %>
+
+</table>

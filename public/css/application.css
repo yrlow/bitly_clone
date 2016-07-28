@@ -1,0 +1,93 @@
+/*hash is for id
+dot is for class
+nothing if its for html tags*/
+body{
+	background-color: #AFEEEE;
+}
+#header{
+	width: 100%;
+	height: 170px;
+ 	/*display: block;*/
+}
+
+#header_left{
+	margin-top: 25px;
+	margin-left: 25px;
+	/*display: inline-block;*/
+	width: 25%;
+	float: left;
+}
+
+#name{
+	font-family: "Arial";
+	font-size: 40px;
+	color: white;
+	text-align: left;
+}
+
+#header_right{
+	margin-top: 60px;
+	margin-right: 25px;
+	/*display: inline;*/
+	width: 30%;
+	float: right;
+}
+
+#form{
+	margin-right: 0px;
+	border-right: 0px;
+	padding-right: 0px;
+}
+
+#form_submit{
+	color: red;
+	margin-right: 0px;
+}
+
+#form_input{
+	margin-right: 20px;
+}
+
+@-webkit-keyframes redWhite {  
+  0% { background-color: white; }
+  50% { background-color: white; }
+  51% { background-color: red; }
+  100% { background-color: red; }
+}
+
+@-webkit-keyframes redWhiteFade {  
+  0% { background-color: white; }
+  50% { background-color: red; }
+  100% { background-color: white; }
+}
+
+.new{
+	background-color: #AFEEEE;
+    -webkit-animation-name: redWhite;  
+    -webkit-animation-iteration-count: 6s;  
+    -webkit-animation-duration: 2s;
+}
+
+.display_inline{
+	display: inline;
+}
+
+.left_right_margin{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*.center_alignment{
+
+}*/
+
+li{
+	list-style-type: none;
+}
+
+#header_text{
+	font-family: "Arial";
+	font-size: 35px;
+	color: grey;
+}
+
